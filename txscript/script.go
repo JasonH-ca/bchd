@@ -287,7 +287,7 @@ func CalcSignatureHash(script []byte, hashType SigHashType, tx *wire.MsgTx, idx 
 	if err != nil {
 		return nil, fmt.Errorf("cannot parse output script: %v", err)
 	}
-	return calcSignatureHash(parsedScript, hashType, tx, idx), nil
+	return calcSignatureHash(parsedScript, hashType, tx, idx, true), nil
 }
 
 // calcSignatureHash will, given a script and hash type for the current script
